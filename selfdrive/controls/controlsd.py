@@ -662,6 +662,11 @@ class Controls:
     controlsState.forceDecel = bool(force_decel)
     controlsState.canErrorCounter = self.can_error_counter
 
+    # Hack for reasonable gears/reasonable RPMs on Lexus RX. No upstreaming!
+    # Setting speed may be iffy still
+    if self.v_cruise_kph != 255:
+      controlsState.vCruise = controlsState.vCruise * 0.974
+
     if self.joystick_mode:
       controlsState.lateralControlState.debugState = lac_log
     elif self.CP.steerControlType == car.CarParams.SteerControlType.angle:
