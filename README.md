@@ -27,8 +27,10 @@ these branches. These are continuously synced daily.
 
 * Stock Comma Release 2 (Stable)
   * `commaai_release2`
+    * Upstream: https://github.com/commaai/openpilot/tree/release2
 * Shane's Stock Additions
   * `shanesmiskol_stock_additions`
+    * Upstream: https://github.com/ShaneSmiskol/openpilot/tree/stock_additions
 
 More forks/branches can be tracked upon request!
 
@@ -38,7 +40,7 @@ Please see this wiki entry and consider this repository as another fork:
 
 https://github.com/commaai/openpilot/wiki/Forks
 
-If you are not familiar with SSH, you are recommended to use
+If you are not familiar with SSH or Git, you are recommended to use
 [Shane's Fork Installer][shaneforkinstaller]. Uninstall openpilot to see the
 installation setup again.
 
@@ -47,10 +49,13 @@ Shane's Fork Installer Example Custom Software Installer URLs:
 * https://smiskol.com/fork/LexusRXopenpilotUG/commaai_release2
 * https://smiskol.com/fork/LexusRXopenpilotUG/shanesmiskol_stock_additions
 
+The updater may or may not work. If it doesn't update, just uninstall and
+reinstall with the appropiate above URL.
+
 ## Behind the Scenes
 
-Please look at the `.github/workflows` repository to see how the pre-patched
-branches are continually updated daily.
+Please look at the `.github/workflows` path in this repo to see how the
+pre-patched branches are continually updated daily.
 
 
 [ghopissue]: https://github.com/commaai/openpilot/issues/2106
