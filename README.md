@@ -5,26 +5,32 @@ for Lexus RX openpilot users that can't be upstreamed.
 
 * [Low-gear/high-RPM on highways with openpilot longitudinal control][ghopissue]
   * openpilot is most useful on highways and it is ironic that it is crippled
-    with low fuel milage.
-  * The comma team is not willing to split out the DBC for Toyota vehicles so a
-    different scaling value can be used.
+    with low fuel mileage.
+  * The comma team does not seem willing to split out the DBC for Toyota
+    vehicles so a different scaling value for cruising speed can be used.
   * A proposal to have different scaling values for models of vehicles in the
-    codebase was not recieved well and called a "hack".
+    codebase while preserving the DBC scaling was not received well and called
+    a "hack".
   * No one has or is currently willing to put in the work to try to figure out
-    an alternative to stop this gearing issue.
-  * The commaai OP team was not going to address this for any vehicles
-    pre-TSS2 vehicles such as those using SDSUs. If a solution was presented, it
-    might not be backported.
+    another "proper" alternative to stop this gearing issue.
+  * The comma.ai OP team was not going to address this for any vehicles pre-TSS2
+    vehicles such as those using SDSUs. If a solution was only usable on TSS2,
+    it might not be backported.
+  * **PATCH NOTES**
+    * Hack vCruise in controlsd.py to scale by 0.974 as soon as possible before
+      passing onto rest of openpilot.
 
-## Prepatched forks available
+## Available Prepatched Forks
 
-Prepatched versions of these forks are available at this repository underneath
-these branches.
+Pre-patched versions of these forks are available at this repository underneath
+these branches. These are continuously synced daily.
 
 * Stock Comma Release 2 (Stable)
   * `commaai_release2`
 * Shane's Stock Additions
   * `shanesmiskol_stock_additions`
+
+More forks/branches can be tracked upon request!
 
 ## Usage
 
@@ -32,19 +38,19 @@ Please see this Wiki entry. and consider this repository as another fork:
 
 https://github.com/commaai/openpilot/wiki/Forks
 
-If you are not familiar with SSH, you are strongly recommended to use
+If you are not familiar with SSH, you are recommended to use
 [Shane's Fork Installer][shaneforkinstaller]. Uninstall openpilot to see the
-installation prompt again.
+installation setup again.
 
-Shane's Fork Installer Example URLs:
+Shane's Fork Installer Example Custom Software Installer URLs:
 
-* https://smiskol.com/fork/LexusRXopenpilotUG/commaai-release2
-* https://smiskol.com/fork/LexusRXopenpilotUG/shanesmiskol-stock_additions
+* https://smiskol.com/fork/LexusRXopenpilotUG/commaai_release2
+* https://smiskol.com/fork/LexusRXopenpilotUG/shanesmiskol_stock_additions
 
 ## Behind the Scenes
 
 Please look at the `.github/workflows` repository to see how the pre-patched
-branches are updated daily.
+branches are continually updated daily.
 
 
 [ghopissue]: https://github.com/commaai/openpilot/issues/2106
