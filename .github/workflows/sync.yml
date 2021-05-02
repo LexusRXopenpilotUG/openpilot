@@ -1,0 +1,32 @@
+name: Continuous Sync
+
+on:
+  # schedule:
+  #   - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Clone Repository in whole
+    - name: Be GitHub Actions Bot for Git
+      run: |
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+    - name: Clone commaai-release2 repository
+      run: git clone -b release2 https://github.com/commaai/openpilot commaai_openpilot
+    - name: Change branch name in commaai-release2 repository
+      run: git branch -m commaai_release2
+      working-directory: commaai_openpilot
+    - name: Apply commaai-release2 Patches
+      run: git am ../patches/0.8.3/*.patch
+      working-directory: commaai_openpilot
+    - name: Push commaai-release2
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
+        branch: commaai-release2
+        directory: commaai_openpilot
