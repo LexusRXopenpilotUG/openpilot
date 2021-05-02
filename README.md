@@ -1,7 +1,7 @@
 # Lexus RX openpilot User Group openpilot
 
-This is a repository to store slightly modified forks that are minorly tweaked
-for Lexus RX openpilot users that can't be upstreamed.
+This is a repository to store and continually generate slightly modified forks
+that can't be upstreamed and are minorly tweaked for Lexus RX openpilot users.
 
 * [Low-gear/high-RPM on highways with openpilot longitudinal control][ghopissue]
   * openpilot is most useful on highways and it is ironic that it is crippled
@@ -34,7 +34,7 @@ More forks/branches can be tracked upon request!
 
 ## Usage
 
-Please see this Wiki entry. and consider this repository as another fork:
+Please see this wiki entry and consider this repository as another fork:
 
 https://github.com/commaai/openpilot/wiki/Forks
 
