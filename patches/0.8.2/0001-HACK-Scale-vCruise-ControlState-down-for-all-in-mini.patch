@@ -1,0 +1,29 @@
+From f5a475a441965419e26cd7717be7bca04eba08a5 Mon Sep 17 00:00:00 2001
+From: Nelson Chen <crazysim@gmail.com>
+Date: Sat, 1 May 2021 18:50:38 -0700
+Subject: [PATCH] [HACK] Scale vCruise ControlState down for all in minimalist
+ hack for RX
+
+---
+ selfdrive/controls/controlsd.py | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/selfdrive/controls/controlsd.py b/selfdrive/controls/controlsd.py
+index 216f6d63..a3dc1331 100755
+--- a/selfdrive/controls/controlsd.py
++++ b/selfdrive/controls/controlsd.py
+@@ -584,6 +584,11 @@ class Controls:
+     controlsState.forceDecel = bool(force_decel)
+     controlsState.canErrorCounter = self.can_error_counter
+
++    # Hack for reasonable gears/reasonable RPMs on Lexus RX. No upstreaming!
++    # Setting speed may be iffy still
++    if self.v_cruise_kph != 255:
++      controlsState.vCruise = controlsState.vCruise * 0.974
++
+     if self.CP.lateralTuning.which() == 'pid':
+       controlsState.lateralControlState.pidState = lac_log
+     elif self.CP.lateralTuning.which() == 'lqr':
+--
+2.29.2
+

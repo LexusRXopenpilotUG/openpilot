@@ -22,9 +22,9 @@ Prepatched versions of these forks are available at this repository underneath
 these branches.
 
 * Stock Comma Release 2 (Stable)
-  * `commaai-release2`
+  * `commaai_release2`
 * Shane's Stock Additions
-  * `shanesmiskol-stock_additions`
+  * `shanesmiskol_stock_additions`
 
 ## Usage
 
@@ -40,6 +40,11 @@ Shane's Fork Installer Example URLs:
 
 * https://smiskol.com/fork/LexusRXopenpilotUG/commaai-release2
 * https://smiskol.com/fork/LexusRXopenpilotUG/shanesmiskol-stock_additions
+
+## Behind the Scenes
+
+Please look at the `.github/workflows` repository to see how the pre-patched
+branches are updated daily.
 
 
 [ghopissue]: https://github.com/commaai/openpilot/issues/2106

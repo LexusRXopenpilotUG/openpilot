@@ -8,25 +8,40 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        release_branch:
+          - commaai_release2
+          - shanesmiskol_stock_additions
+        include:
+          - release_branch: commaai_release2
+            patch_version: 0.8.3
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: release2
+          - release_branch: shanesmiskol_stock_additions
+            patch_version: 0.8.2
+            repository_url: https://github.com/ShaneSmiskol/openpilot
+            target_branch: stock_additions
+
     steps:
     - uses: actions/checkout@v2
-      name: Clone Repository in whole
     - name: Be GitHub Actions Bot for Git
       run: |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-    - name: Clone commaai-release2 repository
-      run: git clone -b release2 https://github.com/commaai/openpilot commaai_openpilot
-    - name: Change branch name in commaai-release2 repository
-      run: git branch -m commaai_release2
-      working-directory: commaai_openpilot
-    - name: Apply commaai-release2 Patches
-      run: git am ../patches/0.8.3/*.patch
-      working-directory: commaai_openpilot
-    - name: Push commaai-release2
+    - name: Clone target repository
+      run: git clone -b ${{ matrix.target_branch }} ${{ matrix.repository_url }} target_openpilot
+    - name: Change branch name in target repository
+      run: git branch -m ${{ matrix.release_branch }}
+      working-directory: target_openpilot
+    - name: Apply ${{ matrix.release_branch }} Patches
+      # --committer-date-is-author-date is used to keep the commit ids stable/deterministic on actual upstream changes.
+      run: git am --committer-date-is-author-date ../patches/${{ matrix.patch_version }}/*.patch
+      working-directory: target_openpilot
+    - name: Push ${{ matrix.release_branch }}
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         force: true
-        branch: commaai-release2
-        directory: commaai_openpilot
+        branch: ${{ matrix.release_branch }}
+        directory: target_openpilot
