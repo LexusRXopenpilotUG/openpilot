@@ -25,12 +25,27 @@ that can't be upstreamed and are minorly tweaked for Lexus RX openpilot users.
 Pre-patched versions of these forks are available at this repository underneath
 these branches. These are continuously synced daily.
 
-* Stock Comma Release 2 (Stable)
-  * `commaai_release2`
-    * Upstream: https://github.com/commaai/openpilot/tree/release2
-* Shane's Stock Additions
-  * `shanesmiskol_stock_additions`
-    * Upstream: https://github.com/ShaneSmiskol/openpilot/tree/stock_additions
+
+* [Comma.ai Branches (see this link for description)][commaaiext]:
+  * "`release2`" (Latest Stable Version)
+    * Generated: `commaai_release2`
+      * Upstream: https://github.com/commaai/openpilot/tree/release2
+  * "`release2-staging`"
+    * Generated: `commaai_release2-staging`
+      * Upstream: https://github.com/commaai/openpilot/tree/release2-staging
+  * "`devel-staging`"
+    * Generated: `commaai_devel-staging`
+      * Upstream: https://github.com/commaai/openpilot/tree/devel-staging
+  * "`devel`"
+    * Generated: `commaai_devel-staging`
+      * Upstream: https://github.com/commaai/openpilot/tree/devel
+  * "`master-ci`"
+    * Generated: `commaai_master-ci`
+      * Upstream: https://github.com/commaai/openpilot/tree/master-ci
+* Shane
+  * Stock Additions
+    * Generated: `shanesmiskol_stock_additions`
+      * Upstream: https://github.com/ShaneSmiskol/openpilot/tree/stock_additions
 
 More forks/branches can be tracked upon request!
 
@@ -60,3 +75,4 @@ pre-patched branches are continually updated daily.
 
 [ghopissue]: https://github.com/commaai/openpilot/issues/2106
 [shaneforkinstaller]: https://github.com/ShaneSmiskol/openpilot-installer-generator
+[commaaiext]: https://comma-ai.medium.com/a-2020-theme-externalization-13b33326d8b3

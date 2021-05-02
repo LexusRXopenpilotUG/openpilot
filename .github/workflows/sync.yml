@@ -15,12 +15,32 @@ jobs:
       matrix:
         release_branch:
           - commaai_release2
+          - commaai_release2-staging
+          - commaai_devel
+          - commaai_devel-staging
+          - commaai_master-ci
           - shanesmiskol_stock_additions
         include:
           - release_branch: commaai_release2
             patch_version: 0.8.3
             repository_url: https://github.com/commaai/openpilot
             target_branch: release2
+          - release_branch: commaai_release2-staging
+            patch_version: 0.8.3
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: release2-staging
+          - release_branch: commaai_devel
+            patch_version: 0.8.3
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: devel
+          - release_branch: commaai_devel-staging
+            patch_version: 0.8.3
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: devel-staging
+          - release_branch: commaai_master-ci
+            patch_version: 0.8.3
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: master-ci
           - release_branch: shanesmiskol_stock_additions
             patch_version: 0.8.2
             repository_url: https://github.com/ShaneSmiskol/openpilot
