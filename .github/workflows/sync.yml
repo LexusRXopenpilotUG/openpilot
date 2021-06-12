@@ -38,7 +38,7 @@ jobs:
             repository_url: https://github.com/commaai/openpilot
             target_branch: devel-staging
           - release_branch: commaai_master-ci
-            patch_version: 0.8.3
+            patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
             target_branch: master-ci
           - release_branch: shanesmiskol_stock_additions
