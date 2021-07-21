@@ -31,7 +31,7 @@ jobs:
             repository_url: https://github.com/commaai/openpilot
             target_branch: release2-staging
           - release_branch: commaai_devel
-            patch_version: 0.8.3
+            patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
             target_branch: devel
           - release_branch: commaai_devel-staging
