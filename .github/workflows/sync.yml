@@ -23,7 +23,7 @@ jobs:
           - shanesmiskol_stock_additions
         include:
           - release_branch: commaai_release2
-            patch_version: 0.8.3
+            patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
             target_branch: release2
           - release_branch: commaai_release2-staging
