@@ -30,9 +30,15 @@ these branches. These are continuously synced daily.
   * "`release2`" (Latest Stable Version)
     * Generated: `commaai_release2`
       * Upstream: https://github.com/commaai/openpilot/tree/release2
+  <!-- * "`release3`" (Latest Stable Version)
+    * Generated: `commaai_release3`
+      * Upstream: https://github.com/commaai/openpilot/tree/release3 -->
   * "`release2-staging`"
     * Generated: `commaai_release2-staging`
       * Upstream: https://github.com/commaai/openpilot/tree/release2-staging
+  * "`release3-staging`"
+    * Generated: `commaai_release3-staging`
+      * Upstream: https://github.com/commaai/openpilot/tree/release3-staging
   * "`devel-staging`"
     * Generated: `commaai_devel-staging`
       * Upstream: https://github.com/commaai/openpilot/tree/devel-staging

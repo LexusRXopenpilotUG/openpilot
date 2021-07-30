@@ -16,7 +16,9 @@ jobs:
       matrix:
         release_branch:
           - commaai_release2
+          # - commaai_release3
           - commaai_release2-staging
+          - commaai_release3-staging
           - commaai_devel
           - commaai_devel-staging
           - commaai_master-ci
@@ -26,10 +28,18 @@ jobs:
             patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
             target_branch: release2
+          # - release_branch: commaai_release3
+          #   patch_version: 0.8.6
+          #   repository_url: https://github.com/commaai/openpilot
+          #   target_branch: release3
           - release_branch: commaai_release2-staging
             patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
             target_branch: release2-staging
+          - release_branch: commaai_release3-staging
+            patch_version: 0.8.6
+            repository_url: https://github.com/commaai/openpilot
+            target_branch: release3-staging
           - release_branch: commaai_devel
             patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
