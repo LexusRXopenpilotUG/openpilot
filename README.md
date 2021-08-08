@@ -52,6 +52,9 @@ these branches. These are continuously synced daily.
   * Stock Additions
     * Generated: `shanesmiskol_stock_additions`
       * Upstream: https://github.com/ShaneSmiskol/openpilot/tree/stock_additions
+  * SA-master (based on OP 0.8.7)
+    * Generated: `shanesmiskol_SA-master`
+      * Upstream: https://github.com/ShaneSmiskol/openpilot/tree/SA-master
 
 More forks/branches can be tracked upon request!
 
