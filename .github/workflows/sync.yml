@@ -23,6 +23,7 @@ jobs:
           - commaai_devel-staging
           - commaai_master-ci
           - shanesmiskol_stock_additions
+          - shanesmiskol_SA-master
         include:
           - release_branch: commaai_release2
             patch_version: 0.8.6
@@ -56,6 +57,10 @@ jobs:
             patch_version: 0.8.2
             repository_url: https://github.com/ShaneSmiskol/openpilot
             target_branch: stock_additions
+          - release_branch: shanesmiskol_SA-master
+            patch_version: 0.8.6
+            repository_url: https://github.com/ShaneSmiskol/openpilot
+            target_branch: SA-master
 
     steps:
     - uses: actions/checkout@v2
