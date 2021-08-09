@@ -79,7 +79,7 @@ jobs:
       working-directory: target_openpilot
     - name: Remove .github folder if present
       # If .github is not removed, pushes of branches with this are not permitted.
-      run: rm -rf .github/; GIT_AUTHOR_DATE='2021-08-08 00:00:00 +0000' GIT_COMMITTER_DATE='2021-08-08 00:00:00 +0000' git commit --all -m 'Remove .github'; true
+      run: rm -rf .github/; GIT_AUTHOR_DATE='2021-08-08 00:00:00 +0000' GIT_COMMITTER_DATE='2021-08-08 00:00:00 +0000' git commit --all -m 'Remove .github if present' --allow-empty; true
       working-directory: target_openpilot
     - name: Push ${{ matrix.release_branch }}
       uses: ad-m/github-push-action@master
