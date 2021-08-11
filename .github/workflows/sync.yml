@@ -24,6 +24,7 @@ jobs:
           - commaai_master-ci
           - shanesmiskol_stock_additions
           - shanesmiskol_SA-master
+          - aragon7777_087-shane-spektor-master
         include:
           - release_branch: commaai_release2
             patch_version: 0.8.6
@@ -61,6 +62,10 @@ jobs:
             patch_version: 0.8.6
             repository_url: https://github.com/ShaneSmiskol/openpilot
             target_branch: SA-master
+          - release_branch: aragon7777_087-shane-spektor-master
+            patch_version: 0.8.6
+            repository_url: https://github.com/Aragon7777/openpilot
+            target_branch: 0.8.7-shane-spektor-master
 
     steps:
     - uses: actions/checkout@v2
