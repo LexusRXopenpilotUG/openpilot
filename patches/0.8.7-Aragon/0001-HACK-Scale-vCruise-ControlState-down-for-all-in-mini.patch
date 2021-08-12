@@ -1,0 +1,27 @@
+From 2c5c25cd72f0c4ea0c79041fcdefc3bb2e4c05d2 Mon Sep 17 00:00:00 2001
+From: Nelson Chen <crazysim@gmail.com>
+Date: Sat, 1 May 2021 18:50:38 -0700
+Subject: [PATCH] [HACK] Scale vCruise ControlState down for all in minimalist
+ hack for RX
+
+---
+ selfdrive/controls/controlsd.py | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/selfdrive/controls/controlsd.py b/selfdrive/controls/controlsd.py
+index b575d6eb..c50f7b26 100755
+--- a/selfdrive/controls/controlsd.py
++++ b/selfdrive/controls/controlsd.py
+@@ -660,6 +670,11 @@ class Controls:
+     # personal speedometer offset
+     if self.v_cruise_kph != 255:
+       controlsState.vCruise = controlsState.vCruise * 1.0075
+
++    # Hack for reasonable gears/reasonable RPMs on Lexus RX. No upstreaming!
++    # Setting speed may be iffy still
++    if self.v_cruise_kph != 255:
++      controlsState.vCruise = controlsState.vCruise * 0.974
++    
+
+--
+2.29.2
