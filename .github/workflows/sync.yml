@@ -63,7 +63,7 @@ jobs:
             repository_url: https://github.com/ShaneSmiskol/openpilot
             target_branch: SA-master
           - release_branch: aragon7777_087-shane-spektor-master
-            patch_version: 0.8.3
+            patch_version: 0.8.7-Aragon
             repository_url: https://github.com/Aragon7777/openpilot
             target_branch: 0.8.7-shane-spektor-master
 
