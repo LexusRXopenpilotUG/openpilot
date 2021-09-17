@@ -22,7 +22,6 @@ jobs:
           - commaai_devel
           - commaai_devel-staging
           - commaai_master-ci
-          - shanesmiskol_stock_additions
           - shanesmiskol_SA-master
           # - aragon7777_087-shane-spektor-master
         include:
@@ -53,11 +52,7 @@ jobs:
           - release_branch: commaai_master-ci
             patch_version: 0.8.6
             repository_url: https://github.com/commaai/openpilot
-            target_branch: master-ci
-          - release_branch: shanesmiskol_stock_additions
-            patch_version: 0.8.2
-            repository_url: https://github.com/ShaneSmiskol/openpilot
-            target_branch: stock_additions
+            target_branch: master-ci          
           - release_branch: shanesmiskol_SA-master
             patch_version: 0.8.6
             repository_url: https://github.com/ShaneSmiskol/openpilot
