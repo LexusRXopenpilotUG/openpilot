@@ -68,6 +68,7 @@ installation setup again.
 Shane's Fork Installer Example Custom Software Installer URLs:
 
 * https://smiskol.com/fork/LexusRXopenpilotUG/commaai_release2
+* https://smiskol.com/fork/LexusRXopenpilotUG/commaai_release3
 * https://smiskol.com/fork/LexusRXopenpilotUG/shanesmiskol_stock_additions
 
 The updater may or may not work. If it doesn't update, just uninstall and
