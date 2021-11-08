@@ -27,10 +27,10 @@ these branches. These are continuously synced daily.
 
 
 * [Comma.ai Branches (see this link for description)][commaaiext]:
-  * "`release2`" (Latest Stable Version)
+  * "`release2`" (Latest Prebuilt Stable Version for Comma 2)
     * Generated: `commaai_release2`
       * Upstream: https://github.com/commaai/openpilot/tree/release2
-  * "`release3`" (Latest Stable Version)
+  * "`release3`" (Latest Prebuilt Stable Version for Comma 3)
     * Generated: `commaai_release3`
       * Upstream: https://github.com/commaai/openpilot/tree/release3
   * "`release2-staging`"
