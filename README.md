@@ -3,7 +3,7 @@
 This is a repository to store and continually generate slightly modified forks
 that can't be upstreamed and are minorly tweaked for Lexus RX openpilot users.
 
-* [Low-gear/high-RPM on highways with openpilot longitudinal control][ghopissue]
+* [openpilot issue #2106: Low-gear/high-RPM on highways with openpilot longitudinal control][ghopissue]
   * openpilot is most useful on highways and it is ironic that it is crippled
     with low fuel mileage.
   * The comma team does not seem willing to split out the DBC for Toyota
