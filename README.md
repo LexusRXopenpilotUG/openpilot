@@ -1,4 +1,24 @@
-# Lexus RX openpilot User Group openpilot
+
+# This repository is to be considered obsolete and decommissioned
+
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+
+The issue is resolved! The comma team found some bandwidth to address the issue. 
+
+The comma team has addressed the issue with an upstreamable implementation that 
+was merged in. Instead of a cruising speed factor, a wheel speed factor was 
+used instead and a differing one was added for the RX TSS2. 
+
+Please see the [openpilot issue #2106: Low-gear/high-RPM on highways with openpilot longitudinal control][ghopissue]
+for more information. 
+
+[A fix with this new wheel speed factor value for the pre-TSS2 RX's was merged as well!](https://github.com/commaai/openpilot/pull/23367)
+
+No more builds will be built out of this repository. If you are running this, you should move off back to the "upstream" branches, be it a fork or comma's.
+
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+
+# Lexus RX openpilot User Group openpilot (decommissioned)
 
 This is a repository to store and continually generate slightly modified forks
 that can't be upstreamed and are minorly tweaked for Lexus RX openpilot users.
