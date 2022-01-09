@@ -18,6 +18,10 @@ No more builds will be built out of this repository. If you are running this, yo
 
 🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
 
+The old readme follows below
+
+===
+
 # Lexus RX openpilot User Group openpilot (decommissioned)
 
 This is a repository to store and continually generate slightly modified forks
